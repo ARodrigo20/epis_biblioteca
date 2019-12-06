@@ -24,7 +24,7 @@ class TesisController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once '../Vista/tesis/lista-tesis.php';
+        require_once '../Vista/Tesis/lista-tesis.php';
 
     }
 
@@ -38,7 +38,7 @@ class TesisController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/tesis/editar-tesis.php';
+        require_once '../Vista/Tesis/editar-tesis.php';
 	}
 
 	//Llamado a la vista tesis-perfil
@@ -51,7 +51,7 @@ class TesisController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/tesis/perfil-tesis.php';
+        require_once '../Vista/Tesis/perfil-tesis.php';
 	}
 
     //Llamado a la vista tesis-nuevo
@@ -59,7 +59,7 @@ class TesisController{
         $pvd = new tesis();
 
         //Llamado de las vistas.
-        require_once '../Vista/tesis/agregar-tesis.php';
+        require_once '../Vista/Tesis/agregar-tesis.php';
 
     }
     //Método que registrar al modelo un nuevo proveedor.

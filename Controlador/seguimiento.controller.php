@@ -30,11 +30,11 @@ class TutoriaController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once '../Vista/tutoria/lista-tutorias.php';
+        require_once '../Vista/Tutoria/lista-tutorias.php';
     }
     //Llamado plantilla principal
     public function ListarAlumnosDerivadoPsicologia(){
-        require_once '../Vista/tutoria/lista-AlumnosDerivadoPsicologia.php';
+        require_once '../Vista/Tutoria/lista-AlumnosDerivadoPsicologia.php';
     }
     public function ListaCitas(){
         require_once '../Vista/Tutoria/ListaCitas-tutoria.php';
@@ -53,7 +53,7 @@ class TutoriaController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/editar-tutorias.php';
+        require_once '../Vista/Tutoria/editar-tutorias.php';
 	}
 
 	//Llamado a la vista tutoria-perfil
@@ -66,7 +66,7 @@ class TutoriaController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/perfil-tutoria.php';
+        require_once '../Vista/Tutoria/perfil-tutoria.php';
 	}
 
     public function Nuevo(){
@@ -84,7 +84,7 @@ class TutoriaController{
             $dct = $this->modell->Obtener($_REQUEST['id_docente']);
         }
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/agregar-tutoria.php';
+        require_once '../Vista/Tutoria/agregar-tutoria.php';
     }
 	    public function Ver(){
         $tut = new tutoria();
@@ -101,7 +101,7 @@ class TutoriaController{
             $dct = $this->modell->Obtener($_REQUEST['id_docente']);
         }
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/ver-tutoria.php';
+        require_once '../Vista/Tutoria/ver-tutoria.php';
     }
 
     public function EstadoCurso(){
@@ -130,7 +130,7 @@ class TutoriaController{
           $dct = $this->modell->Obtener($_REQUEST['id_docente']);
       }
       //Llamado de las vistas.
-      require_once '../Vista/tutoria/ver-tutoria.php';
+      require_once '../Vista/Tutoria/ver-tutoria.php';
   }
 
 
@@ -149,7 +149,7 @@ class TutoriaController{
             $dct = $this->modell->Obtener($_REQUEST['id_docente']);
         }
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/cancelar-tutoria.php';
+        require_once '../Vista/Tutoria/cancelar-tutoria.php';
     }
 
 	    public function Citar(){
@@ -167,7 +167,7 @@ class TutoriaController{
             $dct = $this->modell->Obtener($_REQUEST['id_docente']);
         }
         //Llamado de las vistas.
-        require_once '../Vista/tutoria/citar-tutoria.php';
+        require_once '../Vista/Tutoria/citar-tutoria.php';
     }
 
 

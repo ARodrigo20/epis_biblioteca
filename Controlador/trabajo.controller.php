@@ -24,7 +24,7 @@ class trabajoController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once '../Vista/trabajo/lista-trabajo.php';
+        require_once '../Vista/Trabajo/lista-trabajo.php';
 
     }
 
@@ -38,7 +38,7 @@ class trabajoController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/trabajo/editar-trabajo.php';
+        require_once '../Vista/Trabajo/editar-trabajo.php';
 	}
 
 	//Llamado a la vista trabajo-perfil
@@ -51,7 +51,7 @@ class trabajoController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/trabajo/perfil-trabajo.php';
+        require_once '../Vista/Trabajo/perfil-trabajo.php';
 	}
 
     //Llamado a la vista trabajo-nuevo
@@ -59,7 +59,7 @@ class trabajoController{
         $pvd = new trabajo();
 
         //Llamado de las vistas.
-        require_once '../Vista/trabajo/agregar-trabajo.php';
+        require_once '../Vista/Trabajo/agregar-trabajo.php';
 
     }
     //Método que registrar al modelo un nuevo proveedor.

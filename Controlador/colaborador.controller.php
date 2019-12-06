@@ -27,7 +27,7 @@ class ColaboradorController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once '../Vista/colaborador/lista-colaborador.php';
+        require_once '../Vista/Colaborador/lista-colaborador.php';
 
     }
 	public function error(){
@@ -46,7 +46,7 @@ class ColaboradorController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/colaborador/editar-colaborador.php';
+        require_once '../Vista/Colaborador/editar-colaborador.php';
 	}
 
 	//Llamado a la vista colaborador-perfil
@@ -59,7 +59,7 @@ class ColaboradorController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/colaborador/perfil-colaborador.php';
+        require_once '../Vista/Colaborador/perfil-colaborador.php';
 	}
 
     //Llamado a la vista colaborador-nuevo
@@ -67,7 +67,7 @@ class ColaboradorController{
         $pvd = new colaborador();
 
         //Llamado de las vistas.
-        require_once '../Vista/colaborador/agregar-colaborador.php';
+        require_once '../Vista/Colaborador/agregar-colaborador.php';
 
     }
 	//Método que registrar al modelo un nuevo proveedor.

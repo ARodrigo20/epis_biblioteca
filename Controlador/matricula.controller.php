@@ -24,7 +24,7 @@ class matriculaController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once '../Vista/matricula/lista-matricula.php';
+        require_once '../Vista/Matricula/lista-matricula.php';
 
     }
 
@@ -38,7 +38,7 @@ class matriculaController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/matricula/editar-matricula.php';
+        require_once '../Vista/Matricula/editar-matricula.php';
 	}
 	
 
@@ -52,7 +52,7 @@ class matriculaController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/matricula/perfil-matricula.php';
+        require_once '../Vista/Matricula/perfil-matricula.php';
 	}
 
     //Llamado a la vista matricula-nuevo
@@ -60,7 +60,7 @@ class matriculaController{
         $pvd = new matricula();
 
         //Llamado de las vistas.
-        require_once '../Vista/matricula/agregar-matricula.php';
+        require_once '../Vista/Matricula/agregar-matricula.php';
 
     }
     //Método que registrar al modelo un nuevo proveedor.

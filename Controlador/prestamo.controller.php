@@ -63,7 +63,7 @@ class PrestamoController{
         $pvd = new prestamo();
 
         //Llamado de las vistas.
-        require_once '../Vista/prestamo/lista-prestamo.php';
+        require_once '../Vista/Prestamo/lista-prestamo.php';
 
     }    
 
@@ -71,7 +71,7 @@ class PrestamoController{
         $pvd = new prestamo();
 
         //Llamado de las vistas.
-        require_once '../Vista/prestamo/historial-prestamo.php';
+        require_once '../Vista/Prestamo/historial-prestamo.php';
 
     } 
     //Método que registrar al modelo un nuevo proveedor.
@@ -137,7 +137,7 @@ class PrestamoController{
 
         $this->model->Actualizar($pvd);
 
-        header('Location: ../Vista/prestamoVista.php');
+        header('Location: ../Vista/PrestamoVista.php');
     }
 
     //Método que elimina la tupla proveedor con el nit dado.
@@ -175,7 +175,7 @@ class PrestamoController{
             $i++;
         }
 
-        header('Location: ../Vista/prestamoVista.php?c=prestamo&a=Nuevo');
+        header('Location: ../Vista/PrestamoVista.php?c=prestamo&a=Nuevo');
     }
 
 }
