@@ -24,7 +24,7 @@ class LibroController{
 
     //Llamado plantilla principal
     public function Index(){
-        require_once('../Vista/libro/lista-libro.php');
+        require_once 'https://epis-biblio-virtual.herokuapp.com//Vista/libro/lista-libro.php';
 
     }
 
