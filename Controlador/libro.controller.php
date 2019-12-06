@@ -24,8 +24,8 @@ class LibroController{
 
     //Llamado plantilla principal
     public function Index(){
-        //require_once '../Vista/libro/lista-libro.php';
-        require_once '../Vista/Libro/agregar-libro.php';
+        require_once '../Vista/Libro/lista-libro.php';
+        //require_once '../Vista/Libro/agregar-libro.php';
     }
 
     //Llamado a la vista libro-editar
