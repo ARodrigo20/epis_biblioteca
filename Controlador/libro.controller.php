@@ -38,7 +38,7 @@ class LibroController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/libro/editar-libro.php';
+        require_once '../Vista/Libro/editar-libro.php';
 	}
 
 	//Llamado a la vista libro-perfil
@@ -51,7 +51,7 @@ class LibroController{
         }
 
         //Llamado de las vistas.
-        require_once '../Vista/libro/perfil-libro.php';
+        require_once '../Vista/Libro/perfil-libro.php';
 	}
 
     //Llamado a la vista libro-nuevo
