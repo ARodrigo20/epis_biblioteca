@@ -24,7 +24,73 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="dataTable_wrapper">
-                                
+                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Nombre</th>
+                                            <th>Autor</th>
+                                            <th style="text-align: center">Tipo</th>
+                                            <?php if($_SESSION['rol']==4){ ?>
+                                            <th style="text-align: center" >Editar</th>
+                                            <th style="text-align: center" >Eliminar</th>
+                                            <?php } ?>
+                                            <th style="text-align: center" >Ver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php 
+                                    if($_SESSION['rol']==4){
+                                        foreach($this->model->ListarLibro() as $r): ?>
+                                            <tr class="odd gradeX">
+											<?php if($r->libro_cantidad_disponible!=0 or $r->libro_tipo==1){ ?>
+                                                <td><?php echo $r->libro_codigo; ?></td>
+                                                <td><?php echo $r->libro_nombre; ?></td>
+                                                <td><?php echo $r->libro_autor; ?></td>
+											     <?php if($r->libro_tipo == 1){ ?>
+												<td style="text-align: center">Virtual</td>
+											     <?php }else{ ?>
+											    <td style="text-align: center">Fisico</td>
+											     <?php } ?>
+                                            
+                                                <td style="text-align: center" class="center"><a href="?c=libro&a=Crud&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-pencil"></a></td>
+                                                <td style="text-align: center" class="center"><a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=libro&a=Eliminar&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+                                            
+
+                                                <td style="text-align: center" class="center"><a href="?c=libro&a=Perfil&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+                                            <?php }else{ ?>
+											     <td bgcolor="red"><?php echo $r->libro_codigo; ?></td>
+                                                <td bgcolor="red"><?php echo $r->libro_nombre; ?></td>
+                                                <td bgcolor="red"><?php echo $r->libro_autor; ?></td>
+                                                <?php if($r->libro_tipo == 1){ ?>
+												<td style="text-align: center" bgcolor="red">Virtual</td>
+											     <?php }else{ ?>
+											    <td style="text-align: center" bgcolor="red">Fisico</td>
+											     <?php } ?>
+                                                <td style="text-align: center" bgcolor="red" class="center"><a href="?c=libro&a=Crud&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-pencil"></a></td>
+                                                <td style="text-align: center" bgcolor="red" class="center"><a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=libro&a=Eliminar&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+                                                <td style="text-align: center" bgcolor="red" class="center"><a href="?c=libro&a=Perfil&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+											<?php } ?>
+                                        </tr>                                        
+                                    <?php endforeach; 
+                                    }else{
+                                       
+                                     foreach($this->model->ListarLibroVirtual() as $r): ?>
+                                        <tr class="odd gradeX">
+                                            <td><?php echo $r->libro_codigo; ?></td>
+                                            <td><?php echo $r->libro_nombre; ?></td>
+                                            <td><?php echo $r->libro_autor; ?></td>
+											<?php if($r->libro_tipo == 1){ ?>
+												<td style="text-align: center">Virtual</td>
+											     <?php }else{ ?>
+											    <td style="text-align: center">Fisico</td>
+											<?php } ?>
+                                            <td style="text-align: center" class="center"><a href="?c=libro&a=Perfil&libro_id=<?php echo $r->libro_id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+                                        </tr>                                        
+                                    <?php endforeach; 
+                                    } ?>
+                                    </tbody>
+                                </table>
                             </div>
                             <!-- /.table-responsive -->
                             
